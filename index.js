@@ -29,10 +29,10 @@ function validateInput(userName) {
 function saveUserData(userName) {
   users.set(userName, { userName });
   logger.info("User data saved");
-  return sendConfirmation(userName);
+  return sendConfirmation();
 }
 
-function sendConfirmation(userName) {
+function sendConfirmation() {
   logger.info("Sending confirmation");
   return "User registered successfully! Confirmation sent.";
 }
