@@ -5,8 +5,6 @@ The application allows you to register users and store them in a simple, efficie
 **Tutorial**: [Contextual Logging in Node.js with AsyncHooks
 ](https://betterstack.com/community/guides/scaling-nodejs/async-hooks-explained/)
 
-![Screenshot or GIF of the application in action](screenshot.png)
-
 ## 🟢 Prerequisites
 
 Ensure you have Node.js and npm installed on your machine.
