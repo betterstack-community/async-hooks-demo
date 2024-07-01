@@ -1,27 +1,34 @@
-# Title of the project
+# Registration App
 
-Description of the project.
+The application allows you to register users and store them in a simple, efficient in-memory storage system.
 
-**Tutorial**: [Link to corresponding BetterStack tutorial]()
+**Tutorial**: [Contextual Logging in Node.js with AsyncHooks
+](https://betterstack.com/community/guides/scaling-nodejs/async-hooks-explained/)
 
 ![Screenshot or GIF of the application in action](screenshot.png)
 
 ## 🟢 Prerequisites
 
-A list of requirements and package versions that the reader needs to build and
-run the project.
-
-- The first thing.
-- The second thing.
+Ensure you have Node.js and npm installed on your machine.
 
 ## 📦 Getting started
 
-A brief guide to setting up the project.
+- Clone this repository to your machine:
 
-- Do the first thing.
-- Do the next thing.
+```bash
+git clone https://github.com/betterstack-community/async-hooks-demo
+```
+
+- `cd` into the project folder and run `npm install` to download dependencies.
+- Execute the command below to start the development server:
+
+```bash
+npm run dev
+```
+
+- Visit `curl -X GET "http://localhost:3000/register?username=john"`
+  in your browser to register the first user.
 
 ## ⚖ License
 
-The code used in this project and in the linked tutorial are licensed under the
-[Apache License, Version 2.0](LICENSE)
+The code used in this project and in the linked tutorial are licensed under the [Apache License, Version 2.0](LICENSE).
