@@ -24,7 +24,7 @@ git clone https://github.com/betterstack-community/async-hooks-demo
 npm run dev
 ```
 
-- Visit `curl -X GET "http://localhost:3000/register?username=john"`
+- Visit `http://localhost:3000/register?username=john`
   in your browser to register the first user.
 
 ## ⚖ License
