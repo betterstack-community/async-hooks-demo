@@ -1,6 +1,6 @@
 import Fastify from "fastify";
 
-const fastify = Fastify({ logger: true });
+const fastify = Fastify({ logger: true, disableRequestLogging: true });
 const logger = fastify.log;
 const users = new Map(); // Simple in-memory storage for user data
 
@@ -16,13 +16,13 @@ function registerUser(userName) {
     return saveUserData(userName);
   } else {
     logger.warn("Invalid input for username");
-    return "Invalid input for username";
+    return { error: "Invalid input for username" };
   }
 }
 
 function validateInput(userName) {
   const isValid = typeof userName === "string" && userName.trim() !== "";
-  logger.info(`Validating input. IsValid: ${isValid}`);
+  logger.info({ isValid }, "Validating input");
   return isValid;
 }
 
@@ -34,13 +34,13 @@ function saveUserData(userName) {
 
 function sendConfirmation() {
   logger.info("Sending confirmation");
-  return "User registered successfully! Confirmation sent.";
+  return { message: "User registered successfully! Confirmation sent." };
 }
 
 fastify.listen({ port: 3000 }, (err, address) => {
   if (err) {
-    logger.error(err);
+    fastify.log.error(err);
     process.exit(1);
   }
-  logger.info(`Server is listening on ${address}`);
+  fastify.log.info(`Server is listening on ${address}`);
 });
